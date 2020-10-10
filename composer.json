@@ -1,5 +1,5 @@
 {
-    "name": "vlad/utils.shorthand",
+    "name": "wumvi/utils.shorthand",
     "autoload": {
         "psr-4": {
             "Wumvi\\Utils\\Shorthand\\": "src"
