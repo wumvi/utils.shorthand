@@ -11,7 +11,7 @@ class Salt
     public const SUPPORT = 'sp';
     public const ALL = 'all';
 
-    private array $salts;
+    protected array $salts;
 
     public function __construct(array $salts)
     {

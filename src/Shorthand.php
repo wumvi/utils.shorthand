@@ -12,8 +12,8 @@ use Symfony\Component\DependencyInjection\Container;
 
 class Shorthand
 {
-    private DI $diBuilder;
-    private bool $isDev;
+    protected DI $diBuilder;
+    protected bool $isDev;
 
     public function __construct()
     {
