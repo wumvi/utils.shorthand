@@ -75,7 +75,8 @@ class Shorthand
             Errors::conditionExit(empty($jsonRaw), 'wrong-data', 'check-base64');
         }
 
-        $session = new $class(json_decode($jsonRaw, false, 2, JSON_THROW_ON_ERROR));
+        $json = json_decode($jsonRaw, false, 2, JSON_THROW_ON_ERROR);
+        $session = new $class(empty($json) ? new \stdClass() : $json);
 
         $isExpired = $session->getTtl() !== -1 && $session->getTtl() < time();
         Errors::conditionExit($isExpired, 'wrong-session', 'session-expired');
