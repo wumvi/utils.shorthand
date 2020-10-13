@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Wumvi\Utils\Shorthand;
 
+use Wumvi\Curl\Curl;
+use Wumvi\Curl\Pipe\PostMethodPipe;
 use Wumvi\Utils\Response;
 use Wumvi\Utils\Request;
 use Wumvi\Utils\Sign;
@@ -89,5 +91,31 @@ class Shorthand
         header('Access-Control-Allow-Origin: *');
         Response::flush(Response::jsonSuccess($data));
         exit;
+    }
+
+
+    public function serviceRequest(string $url, Salt $salt, array $safeData, array $userData, $algo = Salt::SERVICE): ?string
+    {
+        $signData = base64_encode(json_encode($safeData));
+        $safe = Sign::getSignWithData($signData, $salt->getSaltByName($algo), $algo);
+        $postData = json_encode(['safe' => $safe,] + $userData);
+
+        try {
+            $curl = new Curl();
+            $curl->setTimeout(2);
+            $postPipe = new PostMethodPipe();
+            $postPipe->setData($postData);
+            $curl->applyPipe($postPipe);
+            $curl->setUrl($url);
+            $response = $curl->exec();
+            $code = $response->getHttpCode();
+            if ($code < 200 || 299 < $code) {
+                return null;
+            }
+        } catch (\Exception $ex) {
+            return null;
+        }
+
+        return $response->getData();
     }
 }
