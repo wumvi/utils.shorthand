@@ -16,8 +16,8 @@
         "wumvi/utils.response": "v1.0.5",
         "wumvi/utils.sign": "v1.0.5",
         "wumvi/errors": "v1.0.1",
+        "wumvi/curl": "v1.0.1",
         "wumvi/di": "v1.0.3",
-        "wumvi/recall-request": "v1.0.7",
         "ext-json": "*"
     }
 }

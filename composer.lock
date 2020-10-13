@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8362a0e7a772b558f840426b4f53d882",
+    "content-hash": "1738f8b0f2d93982d107abbe60155992",
     "packages": [
         {
             "name": "psr/container",
@@ -735,16 +735,16 @@
         },
         {
             "name": "wumvi/curl",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wumvi/curl.git",
-                "reference": "7867b588423c92cbc6edc27400f865fd2575e65e"
+                "reference": "0ae7150a49ffd0727680e639ab6d87727cd0a84b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wumvi/curl/zipball/7867b588423c92cbc6edc27400f865fd2575e65e",
-                "reference": "7867b588423c92cbc6edc27400f865fd2575e65e",
+                "url": "https://api.github.com/repos/wumvi/curl/zipball/0ae7150a49ffd0727680e639ab6d87727cd0a84b",
+                "reference": "0ae7150a49ffd0727680e639ab6d87727cd0a84b",
                 "shasum": ""
             },
             "require": {
@@ -774,7 +774,7 @@
                 }
             ],
             "description": "Plugin Curl library",
-            "time": "2020-06-17T20:49:28+00:00"
+            "time": "2020-10-07T22:54:45+00:00"
         },
         {
             "name": "wumvi/di",
@@ -852,74 +852,6 @@
                 }
             ],
             "time": "2020-09-13T13:57:42+00:00"
-        },
-        {
-            "name": "wumvi/mysqldao",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wumvi/mysqldao.git",
-                "reference": "8d720fdd18dea441756e74e857d65d00a7d63a45"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wumvi/mysqldao/zipball/8d720fdd18dea441756e74e857d65d00a7d63a45",
-                "reference": "8d720fdd18dea441756e74e857d65d00a7d63a45",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mysqli": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Wumvi\\MysqlDao\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Vitaliy Kozlenko",
-                    "email": "vk@wumvi.com"
-                }
-            ],
-            "time": "2020-09-22T23:09:27+00:00"
-        },
-        {
-            "name": "wumvi/recall-request",
-            "version": "v1.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wumvi/recall-request.git",
-                "reference": "14d1c4a7a273ba965b365e73bcd5eb708f360780"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wumvi/recall-request/zipball/14d1c4a7a273ba965b365e73bcd5eb708f360780",
-                "reference": "14d1c4a7a273ba965b365e73bcd5eb708f360780",
-                "shasum": ""
-            },
-            "require": {
-                "wumvi/curl": "v1.0.0",
-                "wumvi/mysqldao": "v1.0.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Wumvi\\ReCallRequest\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "VladKopalov",
-                    "email": "vladkop@mail.ru"
-                }
-            ],
-            "time": "2020-09-30T22:35:33+00:00"
         },
         {
             "name": "wumvi/utils.request",
