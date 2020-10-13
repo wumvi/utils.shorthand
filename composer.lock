@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3afc761de53a909b05b9a7a2beebafa2",
+    "content-hash": "ee0ace1c8a6787fcf5863952163e8cda",
     "packages": [
         {
             "name": "psr/container",
@@ -735,16 +735,16 @@
         },
         {
             "name": "wumvi/curl",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wumvi/curl.git",
-                "reference": "16ddce221e58876bdab922ad117225e16b3546d2"
+                "reference": "989387b409506d8a80f18c0e7557377496938d27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wumvi/curl/zipball/16ddce221e58876bdab922ad117225e16b3546d2",
-                "reference": "16ddce221e58876bdab922ad117225e16b3546d2",
+                "url": "https://api.github.com/repos/wumvi/curl/zipball/989387b409506d8a80f18c0e7557377496938d27",
+                "reference": "989387b409506d8a80f18c0e7557377496938d27",
                 "shasum": ""
             },
             "require": {
@@ -774,7 +774,7 @@
                 }
             ],
             "description": "Plugin Curl library",
-            "time": "2020-10-13T22:30:54+00:00"
+            "time": "2020-10-13T23:24:02+00:00"
         },
         {
             "name": "wumvi/di",
