@@ -11,6 +11,10 @@
             "email": "vk@wumvi.com"
         }
     ],
+    "archive": {
+        "exclude": ["phpunit", "phpunit.xml", "ruleset.xml"]
+    },
+    "license": "proprietary",
     "require": {
         "php": "^8.0",
         "wumvi/utils.request": "v1.0.3",
