@@ -18,8 +18,8 @@
     "require": {
         "php": "^8.0",
         "wumvi/utils.request": "v1.0.3",
-        "wumvi/utils.response": "v1.0.6",
-        "wumvi/utils.sign": "v1.0.11",
+        "wumvi/utils.response": "v1.0.7",
+        "wumvi/utils.sign": "v1.0.12",
         "wumvi/errors": "v1.0.1",
         "wumvi/di": "v1.0.3",
         "ext-json": "*"

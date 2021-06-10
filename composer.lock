@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1418d6957e8be550a9c68f9b00e573c4",
+    "content-hash": "37f6979183801accc24d6408ced636af",
     "packages": [
         {
             "name": "psr/container",
@@ -945,22 +945,22 @@
         },
         {
             "name": "wumvi/utils.response",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wumvi/utils.response.git",
-                "reference": "555327a50896a783f48c2d23d2a1fa5490fb65bc"
+                "reference": "342ac5fe2184c8bf7dac268be2bbc40677fa613e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wumvi/utils.response/zipball/555327a50896a783f48c2d23d2a1fa5490fb65bc",
-                "reference": "555327a50896a783f48c2d23d2a1fa5490fb65bc",
+                "url": "https://api.github.com/repos/wumvi/utils.response/zipball/342ac5fe2184c8bf7dac268be2bbc40677fa613e",
+                "reference": "342ac5fe2184c8bf7dac268be2bbc40677fa613e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": "^8.0",
-                "wumvi/utils.sign": "v1.0.11"
+                "wumvi/utils.sign": "v1.0.12"
             },
             "require-dev": {
                 "overtrue/phplint": "8.0.x-dev",
@@ -985,22 +985,22 @@
             ],
             "support": {
                 "issues": "https://github.com/wumvi/utils.response/issues",
-                "source": "https://github.com/wumvi/utils.response/tree/v1.0.6"
+                "source": "https://github.com/wumvi/utils.response/tree/v1.0.7"
             },
-            "time": "2021-06-09T23:28:29+00:00"
+            "time": "2021-06-10T23:01:31+00:00"
         },
         {
             "name": "wumvi/utils.sign",
-            "version": "v1.0.11",
+            "version": "v1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wumvi/utils.sign.git",
-                "reference": "c21e5f64005595ed653622e27b9b20131992095e"
+                "reference": "a5ddd2ddab43cf61b64c03fed9507273feded15f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wumvi/utils.sign/zipball/c21e5f64005595ed653622e27b9b20131992095e",
-                "reference": "c21e5f64005595ed653622e27b9b20131992095e",
+                "url": "https://api.github.com/repos/wumvi/utils.sign/zipball/a5ddd2ddab43cf61b64c03fed9507273feded15f",
+                "reference": "a5ddd2ddab43cf61b64c03fed9507273feded15f",
                 "shasum": ""
             },
             "require": {
@@ -1029,9 +1029,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wumvi/utils.sign/issues",
-                "source": "https://github.com/wumvi/utils.sign/tree/v1.0.11"
+                "source": "https://github.com/wumvi/utils.sign/tree/v1.0.12"
             },
-            "time": "2021-06-09T23:02:57+00:00"
+            "time": "2021-06-10T22:58:54+00:00"
         }
     ],
     "packages-dev": [],

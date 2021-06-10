@@ -5,6 +5,7 @@ namespace Wumvi\Utils\Shorthand;
 
 use Wumvi\Sign\Decode;
 use Wumvi\Sign\Encode;
+use Wumvi\Sign\SaltStorage;
 use Wumvi\Utils\Response;
 use Wumvi\Utils\Request;
 use Wumvi\DI\DI;
