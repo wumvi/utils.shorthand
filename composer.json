@@ -20,7 +20,7 @@
         "wumvi/utils.request": "v1.0.3",
         "wumvi/utils.response": "v1.0.7",
         "wumvi/utils.sign": "v1.0.12",
-        "wumvi/errors": "v1.0.1",
+        "wumvi/errors": "v1.0.2",
         "wumvi/di": "v1.0.3",
         "ext-json": "*"
     }

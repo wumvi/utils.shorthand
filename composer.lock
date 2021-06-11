@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37f6979183801accc24d6408ced636af",
+    "content-hash": "b4d6eea278f3db9c7f49fd79fe8bc2b7",
     "packages": [
         {
             "name": "psr/container",
@@ -856,27 +856,27 @@
         },
         {
             "name": "wumvi/errors",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wumvi/errors.git",
-                "reference": "16e33ec4e99e8f4d3238763a39b3cfcdcfc52693"
+                "reference": "796df80ddfb19b2f382137b625f6b7e1ef2a254e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wumvi/errors/zipball/16e33ec4e99e8f4d3238763a39b3cfcdcfc52693",
-                "reference": "16e33ec4e99e8f4d3238763a39b3cfcdcfc52693",
+                "url": "https://api.github.com/repos/wumvi/errors/zipball/796df80ddfb19b2f382137b625f6b7e1ef2a254e",
+                "reference": "796df80ddfb19b2f382137b625f6b7e1ef2a254e",
                 "shasum": ""
             },
             "require": {
-                "wumvi/utils.response": "v1.*"
+                "ext-json": "*",
+                "php": "^8.0",
+                "wumvi/utils.response": "v1.0.7"
             },
             "require-dev": {
-                "overtrue/phplint": "2.0.2",
-                "phan/phan": "3.0.2",
-                "phpstan/phpstan": "0.12.28",
-                "phpunit/phpunit": "9.2.2",
-                "squizlabs/php_codesniffer": "3.5.5"
+                "overtrue/phplint": "8.0.x-dev",
+                "phan/phan": "4.0.6",
+                "phpunit/phpunit": "9.5.5"
             },
             "type": "library",
             "autoload": {
@@ -896,9 +896,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wumvi/errors/issues",
-                "source": "https://github.com/wumvi/errors/tree/v1.0.1"
+                "source": "https://github.com/wumvi/errors/tree/v1.0.2"
             },
-            "time": "2020-09-13T13:57:42+00:00"
+            "time": "2021-06-11T23:30:15+00:00"
         },
         {
             "name": "wumvi/utils.request",
