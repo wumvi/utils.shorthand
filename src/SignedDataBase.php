@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Wumvi\Utils\Shorthand;
+namespace Wumvi\Shorthand;
 
-class SessionBase
+class SignedDataBase
 {
     public function __construct(
         public \stdClass $raw

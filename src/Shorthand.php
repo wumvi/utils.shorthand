@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Wumvi\Utils\Shorthand;
+namespace Wumvi\Shorthand;
 
 use JetBrains\PhpStorm\NoReturn;
 use Wumvi\Errors\ErrorResponse;
@@ -36,8 +36,8 @@ class Shorthand
      * Check valid sign in the url or not
      *
      * @param SaltStorage $saltStorage Salt storage
-     * @param string $signKey Name of param for sign
-     * @param string $requestUri Path and query
+     * @param string      $signKey     Name of param for sign
+     * @param string      $requestUri  Path and query
      *
      * @return bool Valid sign or not
      */
@@ -73,7 +73,7 @@ class Shorthand
 
     /**
      * @param string $root
-     * @param bool $resolveEnvPlaceholders
+     * @param bool   $resolveEnvPlaceholders
      * @param string $configFile
      * @param string $envFile
      *
@@ -117,10 +117,10 @@ class Shorthand
 
     /**
      * @param string|array $data
-     * @param string $saltName
-     * @param SaltStorage $saltStorage
-     * @param string $algo
-     * @param bool $isBase64
+     * @param string       $saltName
+     * @param SaltStorage  $saltStorage
+     * @param string       $algo
+     * @param bool         $isBase64
      *
      * @return string
      */
@@ -139,11 +139,11 @@ class Shorthand
     }
 
     /**
-     * @param string $url
-     * @param string $saltName
-     * @param SaltStorage $saltStorage
-     * @param string $algo
-     * @param string $signKey
+     * @param  string      $url
+     * @param  string      $saltName
+     * @param  SaltStorage $saltStorage
+     * @param  string      $algo
+     * @param  string      $signKey
      * @return string
      */
     public function createSignedUrl(
@@ -162,10 +162,10 @@ class Shorthand
     /**
      * @param SaltStorage $saltStorage
      * @param $class
-     * @param bool $isBase64
-     * @param string $name
-     * @param array $saltNameAllow
-     * @param int $jsonDepth
+     * @param bool        $isBase64
+     * @param string      $name
+     * @param array       $saltNameAllow
+     * @param int         $jsonDepth
      *
      * @return \stdClass|ErrorResponse|string
      *
@@ -187,10 +187,10 @@ class Shorthand
     /**
      * @param SaltStorage $saltStorage
      * @param $class
-     * @param bool $isBase64
-     * @param string $name
-     * @param array $saltNameAllow
-     * @param int $jsonDepth
+     * @param bool        $isBase64
+     * @param string      $name
+     * @param array       $saltNameAllow
+     * @param int         $jsonDepth
      *
      * @return \stdClass|ErrorResponse|string
      *
@@ -212,10 +212,10 @@ class Shorthand
     /**
      * @param SaltStorage $saltStorage
      * @param $class
-     * @param bool $isBase64
-     * @param string $name
-     * @param array $saltNameAllow
-     * @param int $jsonDepth
+     * @param bool        $isBase64
+     * @param string      $name
+     * @param array       $saltNameAllow
+     * @param int         $jsonDepth
      *
      * @return \stdClass|ErrorResponse|string
      *
@@ -234,12 +234,12 @@ class Shorthand
     }
 
     /**
-     * @param string $signDataRaw
+     * @param string      $signDataRaw
      * @param SaltStorage $saltStorage
-     * @param null $class
-     * @param bool $isBase64
-     * @param array $saltNameAllow
-     * @param int $jsonDepth
+     * @param null        $class
+     * @param bool        $isBase64
+     * @param array       $saltNameAllow
+     * @param int         $jsonDepth
      *
      * @return \stdClass|ErrorResponse|string
      *
@@ -271,7 +271,8 @@ class Shorthand
                 return $signData->getData();
             }
 
-            return new $class(json_decode($signData->getData(), false, $jsonDepth, JSON_THROW_ON_ERROR));
+            $json = json_decode($signData->getData(), false, $jsonDepth, JSON_THROW_ON_ERROR);
+            return new $class($json);
         }
 
         $isAllow = count($saltNameAllow) === 0 || in_array($signData->getSaltName(), $saltNameAllow);
@@ -319,28 +320,29 @@ class Shorthand
     }
 
 
-//    public function serviceRequest(string $url, Salt $salt, array $safeData, array $userData, $algo = Salt::SERVICE): ?string
-//    {
-//        $signData = base64_encode(json_encode($safeData));
-//        $safe = Sign::getSignWithData($signData, $salt->getSaltByName($algo), $algo);
-//        $postData = json_encode(['safe' => $safe,] + $userData);
-//
-//        try {
-//            $curl = new Curl();
-//            $curl->setTimeout(2);
-//            $postPipe = new PostMethodPipe();
-//            $postPipe->setData($postData);
-//            $curl->applyPipe($postPipe);
-//            $curl->setUrl($url);
-//            $response = $curl->exec();
-//            $code = $response->getHttpCode();
-//            if ($code < 200 || 299 < $code) {
-//                return null;
-//            }
-//        } catch (\Exception $ex) {
-//            return null;
-//        }
-//
-//        return $response->getData();
-//    }
+    //    public function serviceRequest(string $url, Salt $salt, array $safeData,
+    //    array $userData, $algo = Salt::SERVICE): ?string
+    //    {
+    //        $signData = base64_encode(json_encode($safeData));
+    //        $safe = Sign::getSignWithData($signData, $salt->getSaltByName($algo), $algo);
+    //        $postData = json_encode(['safe' => $safe,] + $userData);
+    //
+    //        try {
+    //            $curl = new Curl();
+    //            $curl->setTimeout(2);
+    //            $postPipe = new PostMethodPipe();
+    //            $postPipe->setData($postData);
+    //            $curl->applyPipe($postPipe);
+    //            $curl->setUrl($url);
+    //            $response = $curl->exec();
+    //            $code = $response->getHttpCode();
+    //            if ($code < 200 || 299 < $code) {
+    //                return null;
+    //            }
+    //        } catch (\Exception $ex) {
+    //            return null;
+    //        }
+    //
+    //        return $response->getData();
+    //    }
 }

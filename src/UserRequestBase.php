@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Wumvi\Utils\Shorthand;
+namespace Wumvi\Shorthand;
 
 class UserRequestBase
 {
