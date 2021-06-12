@@ -26,9 +26,9 @@ class Shorthand
     public const SIGN_HEADER_NAME = 'X_SDATA';
     public const JSON_MAX_DEPTH = 6;
 
-    public function __construct()
+    public function __construct(array $customDataForErrorLog = [])
     {
-        Errors::attachExceptionHandler();
+        Errors::attachExceptionHandler($customDataForErrorLog);
         $this->isDev = ($_SERVER['APP_ENV'] ?? self::DEV_MODE) === self::DEV_MODE;
     }
 
@@ -47,7 +47,12 @@ class Shorthand
         string $requestUri = ''
     ): bool {
         $urlInfo = parse_url($requestUri ?: $_SERVER['REQUEST_URI']);
-        parse_str($urlInfo['query'], $urlQuery);
+        $query = $urlInfo['query'] ?? '';
+        if (empty($query)) {
+            return false;
+        }
+
+        parse_str($query, $urlQuery);
         if (isset($urlQuery['sksg']) && $this->isDev) {
             return true;
         }
