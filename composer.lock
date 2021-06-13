@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6ccf7242497ad96dabc509ac2373b5c",
+    "content-hash": "835bc4f99b338a484e17ff73c2e4ef76",
     "packages": [
         {
             "name": "psr/container",
@@ -856,16 +856,16 @@
         },
         {
             "name": "wumvi/errors",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wumvi/errors.git",
-                "reference": "5a532f0d55130bf9d5613e07107a246299ebd07b"
+                "reference": "39b15a7f1cd9bb3f3ad86d9383752a93a64d6527"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wumvi/errors/zipball/5a532f0d55130bf9d5613e07107a246299ebd07b",
-                "reference": "5a532f0d55130bf9d5613e07107a246299ebd07b",
+                "url": "https://api.github.com/repos/wumvi/errors/zipball/39b15a7f1cd9bb3f3ad86d9383752a93a64d6527",
+                "reference": "39b15a7f1cd9bb3f3ad86d9383752a93a64d6527",
                 "shasum": ""
             },
             "require": {
@@ -894,9 +894,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wumvi/errors/issues",
-                "source": "https://github.com/wumvi/errors/tree/1.0.4"
+                "source": "https://github.com/wumvi/errors/tree/1.0.5"
             },
-            "time": "2021-06-12T23:45:46+00:00"
+            "time": "2021-06-13T23:34:43+00:00"
         },
         {
             "name": "wumvi/utils.request",
