@@ -2,7 +2,7 @@
     "name": "wumvi/utils.shorthand",
     "autoload": {
         "psr-4": {
-            "Wumvi\\Shorthand\\": "src"
+            "Wumvi\\Shorthand\\": "src/Wumvi/Shorthand/"
         }
     },
     "authors": [
