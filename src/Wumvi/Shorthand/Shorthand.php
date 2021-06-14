@@ -36,15 +36,17 @@ class Shorthand
      * Check valid sign in the url or not
      *
      * @param SaltStorage $saltStorage Salt storage
-     * @param string      $signKey     Name of param for sign
-     * @param string      $requestUri  Path and query
+     * @param string $requestUri Path and query
+     * @param string[] $exceptParams Except params
+     * @param string $signKey Name of param for sign
      *
      * @return bool Valid sign or not
      */
     public function checkSignedUrl(
         SaltStorage $saltStorage,
+        string $requestUri = '',
+        array $exceptParams = [],
         string $signKey = self::SIGN_QUERY_PARAM_NAME,
-        string $requestUri = ''
     ): bool {
         $urlInfo = parse_url($requestUri ?: $_SERVER['REQUEST_URI']);
         $query = $urlInfo['query'] ?? '';
@@ -59,6 +61,10 @@ class Shorthand
 
         if (!array_key_exists($signKey, $urlQuery)) {
             return false;
+        }
+
+        foreach ($exceptParams as $exceptParamName) {
+            unset($urlQuery[$exceptParamName]);
         }
 
         $sign = $urlQuery[$signKey];
@@ -78,7 +84,7 @@ class Shorthand
 
     /**
      * @param string $root
-     * @param bool   $resolveEnvPlaceholders
+     * @param bool $resolveEnvPlaceholders
      * @param string $configFile
      * @param string $envFile
      *
@@ -104,28 +110,26 @@ class Shorthand
     }
 
     /**
+     * @param string $name
      * @param int $jsonDepth
      *
      * @return \stdClass
      *
      * @throws
      */
-    public function getPostJson(int $jsonDepth = self::JSON_MAX_DEPTH): \stdClass
+    public function getPostJson(string $name = '', int $jsonDepth = self::JSON_MAX_DEPTH): \stdClass
     {
-        return json_decode(
-            Request::getPostRaw(),
-            false,
-            $jsonDepth,
-            JSON_THROW_ON_ERROR
-        );
+        $data = $name ? Request::post($name) : Request::getPostRaw();
+
+        return json_decode($data, false, $jsonDepth, JSON_THROW_ON_ERROR);
     }
 
     /**
      * @param string|array $data
-     * @param string       $saltName
-     * @param SaltStorage  $saltStorage
-     * @param string       $algo
-     * @param bool         $isBase64
+     * @param string $saltName
+     * @param SaltStorage $saltStorage
+     * @param string $algo
+     * @param bool $isBase64
      *
      * @return string
      */
@@ -144,11 +148,11 @@ class Shorthand
     }
 
     /**
-     * @param  string      $url
-     * @param  string      $saltName
-     * @param  SaltStorage $saltStorage
-     * @param  string      $algo
-     * @param  string      $signKey
+     * @param string $url
+     * @param string $saltName
+     * @param SaltStorage $saltStorage
+     * @param string $algo
+     * @param string $signKey
      * @return string
      */
     public function createSignedUrl(
@@ -167,10 +171,10 @@ class Shorthand
     /**
      * @param SaltStorage $saltStorage
      * @param $class
-     * @param bool        $isBase64
-     * @param string      $name
-     * @param array       $saltNameAllow
-     * @param int         $jsonDepth
+     * @param bool $isBase64
+     * @param string $name
+     * @param array $saltNameAllow
+     * @param int $jsonDepth
      *
      * @return \stdClass|ErrorResponse|string
      *
@@ -192,10 +196,10 @@ class Shorthand
     /**
      * @param SaltStorage $saltStorage
      * @param $class
-     * @param bool        $isBase64
-     * @param string      $name
-     * @param array       $saltNameAllow
-     * @param int         $jsonDepth
+     * @param bool $isBase64
+     * @param string $name
+     * @param array $saltNameAllow
+     * @param int $jsonDepth
      *
      * @return \stdClass|ErrorResponse|string
      *
@@ -217,10 +221,10 @@ class Shorthand
     /**
      * @param SaltStorage $saltStorage
      * @param $class
-     * @param bool        $isBase64
-     * @param string      $name
-     * @param array       $saltNameAllow
-     * @param int         $jsonDepth
+     * @param bool $isBase64
+     * @param string $name
+     * @param array $saltNameAllow
+     * @param int $jsonDepth
      *
      * @return \stdClass|ErrorResponse|string
      *
@@ -239,12 +243,12 @@ class Shorthand
     }
 
     /**
-     * @param string      $signDataRaw
+     * @param string $signDataRaw
      * @param SaltStorage $saltStorage
-     * @param null        $class
-     * @param bool        $isBase64
-     * @param array       $saltNameAllow
-     * @param int         $jsonDepth
+     * @param null $class
+     * @param bool $isBase64
+     * @param array $saltNameAllow
+     * @param int $jsonDepth
      *
      * @return \stdClass|ErrorResponse|string
      *
