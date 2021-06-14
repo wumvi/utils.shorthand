@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "835bc4f99b338a484e17ff73c2e4ef76",
+    "content-hash": "d98c891369bf44dd1423934f8b959ab9",
     "packages": [
         {
             "name": "psr/container",
@@ -856,16 +856,16 @@
         },
         {
             "name": "wumvi/errors",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wumvi/errors.git",
-                "reference": "39b15a7f1cd9bb3f3ad86d9383752a93a64d6527"
+                "reference": "287f65ea1a89770a268b7f994b41464c374fd5ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wumvi/errors/zipball/39b15a7f1cd9bb3f3ad86d9383752a93a64d6527",
-                "reference": "39b15a7f1cd9bb3f3ad86d9383752a93a64d6527",
+                "url": "https://api.github.com/repos/wumvi/errors/zipball/287f65ea1a89770a268b7f994b41464c374fd5ce",
+                "reference": "287f65ea1a89770a268b7f994b41464c374fd5ce",
                 "shasum": ""
             },
             "require": {
@@ -879,7 +879,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Wumvi\\Errors\\": "src"
+                    "Wumvi\\Errors\\": "src/Wumvi/Errors/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -888,15 +888,15 @@
             ],
             "authors": [
                 {
-                    "name": "VladKopalov",
-                    "email": "vladkop@mail.ru"
+                    "name": "Private Person",
+                    "email": "privateperson@wumvi.ru"
                 }
             ],
             "support": {
                 "issues": "https://github.com/wumvi/errors/issues",
-                "source": "https://github.com/wumvi/errors/tree/1.0.5"
+                "source": "https://github.com/wumvi/errors/tree/1.0.6"
             },
-            "time": "2021-06-13T23:34:43+00:00"
+            "time": "2021-06-14T00:20:03+00:00"
         },
         {
             "name": "wumvi/utils.request",
