@@ -41,8 +41,8 @@ class Shorthand
     public function getDI(
         string $root = '',
         bool $resolveEnvPlaceholders = true,
-        string $configFile = '/conf/services.yml',
-        string $envFile = '/conf/.env'
+        string $configFile = '/app/src/config/services.yml',
+        string $envFile = '/app/src/config/.env'
     ): Container {
         if ($this->diBuilder === null) {
             $this->diBuilder = new DI();
