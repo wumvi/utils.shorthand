@@ -12,9 +12,7 @@ class Shorthand
     protected ?DI $diBuilder = null;
     protected bool $isDev;
 
-    public const DEV_MODE = 'dev';
-    public const SID_COOKIE_NAME = 'xsid';
-    public const SID_HEADER_NAME = 'XSID';
+    public const SID = 'xsid';
 
     public function __construct(array $customDataForErrorLog = [], bool $isDev = false)
     {
@@ -39,10 +37,10 @@ class Shorthand
      * @return Container
      */
     public function getDI(
-        string $root = '',
+        string $root = '/',
         bool $resolveEnvPlaceholders = true,
-        string $configFile = '/app/src/config/services.yml',
-        string $envFile = '/app/src/config/.env'
+        string $configFile = 'app/src/config/services.yml',
+        string $envFile = 'app/src/config/.env'
     ): Container {
         if ($this->diBuilder === null) {
             $this->diBuilder = new DI();
