@@ -5,31 +5,15 @@
             "Wumvi\\Shorthand\\": "src/Wumvi/Shorthand/"
         }
     },
-    "authors": [
-        {
-            "name": "Private Person",
-            "email": "vk@wumvi.com"
-        }
-    ],
     "archive": {
         "exclude": ["phpunit", "phpunit.xml", "ruleset.xml"]
     },
-    "scripts": {
-        "phpcs": [
-            "phpcs src --parallel=10 --runtime-set php_version 74000 -p --standard=ruleset.xml"
-        ],
-        "test": [
-            "@phpcs"
-        ]
-    },
     "license": "proprietary",
     "require": {
-        "php": "^8.0",
-        "wumvi/utils.request": "v1.0.3",
-        "wumvi/utils.response": "v1.0.7",
-        "wumvi/utils.sign": "v1.0.12",
-        "wumvi/errors": "1.0.6",
-        "wumvi/di": "v1.0.3",
-        "ext-json": "*"
+        "php": "^8.1",
+        "wumvi/utils.request": "v1.0.6",
+        "wumvi/utils.response": "v1.0.10",
+        "wumvi/errors": "1.0.7",
+        "wumvi/di": "v1.0.3"
     }
 }
