@@ -1,7 +1,7 @@
 <?php
 function isDev(): bool
 {
-    return ($_SERVER['IS_DEV'] ?? 'no') === 'yes' || ($_GET[$_SERVER['DEV_KEY']] ?? '0') === '1';
+    return ($_SERVER['IS_DEV'] ?? '0') === '1' || ($_GET[$_SERVER['DEV_KEY']] ?? '0') === '1';
 }
 
 $isDev = isDev();

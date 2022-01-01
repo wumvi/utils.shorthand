@@ -11,7 +11,6 @@
     "license": "proprietary",
     "require": {
         "php": "^8.1",
-        "wumvi/utils.request": "v1.0.6",
         "wumvi/utils.response": "v1.0.10",
         "wumvi/errors": "1.0.7",
         "wumvi/di": "v1.0.3"
